@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mock</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+   
+  </head>
+  <body>
+    <div class="container-fluid">
+      <form id="form" class="form-group">
+        <label for="year"></label>
+        <input
+          type="text"
+          name="year"
+          id="inputYear"
+          class="form-control"
+          placeholder="Year"
+          aria-describedby="helpId"
+          required
+        />
+        <small id="helpId" class="text-muted">format: YYYY</small>
+        <select class="form-control" name="month" id="selectMonth" required>
+          <option value="default">Select a month</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <button type="submit" class="btn btn-outline-dark mt-2 w-100">
+          Check
+        </button>
+      </form>
+      <div class="container" id="available-dates-container">
+      </div>
+    </div>  
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script defer type="module" src="js/app.js"></script>
+    <script defer type="module" src="js/fetch.js"></script>
+  </body>
+</html>
